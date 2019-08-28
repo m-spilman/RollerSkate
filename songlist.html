@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>Sharaoke</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-12 header text-center">
+                <h2 class="display-2">Sharaoke</h2>
+                <a href="index.html">Home</a>
+            </div>
+        </div>
+        <div class="row">
+            <div id='steve' class="col-12 results">
+
+            </div>
+        </div>
+
+    </div>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.4.1/firebase-firestore.js"></script>
+
+
+    <script>
+        // Your web app's Firebase configuration
+        var firebaseConfig = {
+            apiKey: "AIzaSyDUX7JGjmQvBrur1gr1bc2wlpNfiKq_gb8",
+            authDomain: "user-auth-24fe0.firebaseapp.com",
+            databaseURL: "https://user-auth-24fe0.firebaseio.com",
+            projectId: "user-auth-24fe0",
+            storageBucket: "",
+            messagingSenderId: "164145594897",
+            appId: "1:164145594897:web:b6bc362860d40098"
+        };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+        // make auth and firestore references
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+
+    </script>
+
+
+    <script src='songlist.js'></script>
+
+
+</body>
+
+</html>
