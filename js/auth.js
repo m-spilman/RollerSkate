@@ -3,7 +3,7 @@ auth.onAuthStateChanged(user =>{
       //console.log('winning')
     }
     else{
-        document.getElementById('userArea').disabled =true
+        document.getElementById('addSongButton').disabled =true
        
     }
 })
@@ -14,6 +14,13 @@ signupForm.addEventListener('submit', (e) => {
 
     const email = signupForm['signup-email'].value
     const password = signupForm['signup-password'].value
+
+    // auth.setPersistance(firebase.auth.Auth.Persistance.LOCAL).then(function(){
+    //     auth.createUserWithEmailAndPassword(email, password).then(cred => {
+    //         const modal = document.querySelector('#modal-signup')
+    //         M.Modal.getInstance(modal).close()
+    //         signupForm.reset()
+    //     })
 
     auth.createUserWithEmailAndPassword(email, password).then(cred => {
         const modal = document.querySelector('#modal-signup')

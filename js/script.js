@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function(){
     let modals = document.querySelectorAll('.modal')
     M.Modal.init(modals)
     searchSongs()
+   
     })
 
 
@@ -20,7 +21,7 @@ function searchSongs(){
 
     function extractInfo(response){return response.json()}
     function apiResponse (content){
-        returnArray = content.result
+    returnArray = content.result
 
 
         var musicSearchHTML = returnArray.map(function (musicContent){
@@ -34,7 +35,7 @@ function searchSongs(){
             <div class = card-title><h5> ${musicContent.track} </h5></div>
             <div class = card-subtitle year><h5> ${musicContent.artist} </h5></div>
             </div>
-            <button type ='button' class="btn btn-primary"onclick = 'saveToSonglist("${musicContent.id_track}")'>Add To Song List</a>
+            <button type ='button' class="btn btn-primary" id='addSongButton' onclick = 'saveToSonglist("${musicContent.id_track}")'>Add To Song List</a>
             </div> </div> </div>`
            
         }) 
@@ -48,33 +49,29 @@ function saveToSonglist(trackID){
        return trackID == song.id_track
     })
     songArray.push(song)
-    let user = firebase.auth().currentUser.uid; 
-    db.collection('songs').doc(user).set({
-    song: songArray
-    },{ merge: true })
+    let user = auth.currentUser.uid
+     db.collection('songs').doc(user).get().then((docSnapshot) =>{
+        if(docSnapshot.exists){
+            db.collection('songs').doc(user).get().then(stuffs)
+        }
+        else{db.collection('songs').doc(user).set({
+            song: songArray
+            } ,{ merge: true })}
+    }
+    )
+    function stuffs(data)
+    {
+        existingData = data.data().song
+        songArray = songArray.concat(existingData)
+        db.collection('songs').doc(user).set({
+            song: songArray
+            } ,{ merge: true })
+        songArray = []
+    }
+
+  
 }
 
-function renderSongList(songs)
-{
-    var songListHTML = []
-    db.collection('songs').get().then(renderSongList)
-    console.log(songs)
-   
-    songListHTML = songs.map(function(data){
-                return `<div class = col-sm-3>
-                        <div class = movie card style = width: 18rem;>
-                        <img class = card-img-top src = ${data.cover} alt = 'Picture Unavailable'>
-                        <div class = card-body>
-                        <div class = movieInfo>
-                        <div class = card-title><h5> ${data.track} </h5></div>
-                        <div class = card-subtitle year><h5> ${data.artist} </h5></div>
-                        </div>
-                        </div> </div> </div>`
-            })
-         
-       document.getElementById('steve').innerHTML = '<div class = row>' +songListHTML.join('') + '</div>'
-}
-    
 
     
 
