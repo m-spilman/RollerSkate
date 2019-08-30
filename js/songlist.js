@@ -29,6 +29,5 @@ function renderMe(data) {
 }
 function renderNoUser() 
 {
-console.log('bob')
   document.getElementById("steve").innerHTML = "<div class = row><h1> You are not signed in!!</h1</div>";
 }
