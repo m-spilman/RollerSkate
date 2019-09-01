@@ -1,15 +1,14 @@
 var songsArray = [];
 document.addEventListener("DOMContentLoaded", function() {
-  
-  auth.onAuthStateChanged(function(user) {
+    auth.onAuthStateChanged(function(user) {
     if(user)
-    {db.collection("songs").doc(auth.currentUser.uid).get().then(renderMe)}
+    {db.collection("songs").doc(auth.currentUser.uid).get().then(renderMe)} // if user is logged in, get their data and call renderMe
     else
-    {renderNoUser()}
+    {renderNoUser()} // if user is not logged in call renderNoUser
 })
 
 })
-
+//renders the data retreived from the users document
 function renderMe(data) {
   let songsArray = data.data().song;
   songListHTML = songsArray.map(function(data) {
@@ -24,10 +23,11 @@ function renderMe(data) {
         </div> </div> </div>`;
   });
 
-  document.getElementById("steve").innerHTML =
+  document.getElementById("content").innerHTML =
     "<div class = row>" + songListHTML.join("") + "</div>";
 }
-function renderNoUser() 
+function renderNoUser() // renders text letting the user know they are not logged in
 {
-  document.getElementById("steve").innerHTML = "<div class = row><h1> You are not signed in!!</h1</div>";
+  document.getElementById("content").innerHTML = "<div class = 'col-12 header text-center' id='list-notSignedIn'><h1>Login to save content</h1></div>";
 }
+
