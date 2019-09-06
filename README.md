@@ -1,3 +1,5 @@
+# RollerSkate [![Build Status](https://travis-ci.org/m-spilman/RollerSkate.svg?branch=master)](https://travis-ci.org/m-spilman/RollerSkate)
+
 # RollerSkate
 This is phase 1 final project
 
@@ -10,8 +12,6 @@ some basic tools like, [StandardJS]
 
 Tests for [StandardJS] compliance for all files located in `src-js/`. A simple `travis.yml`
 file is included to run your tests on [Travis CI].
-
-# RollerSkate [![Build Status](https://travis-ci.org/m-spilman/RollerSkate.svg?branch=master)](https://travis-ci.org/m-spilman/RollerSkate)
 
 
 ## License
