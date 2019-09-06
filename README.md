@@ -1,3 +1,4 @@
 # RollerSkate
 This is phase 1 final project
-https://travis-ci.org/m-spilman/RollerSkate.svg?branch=master
+
+# Example Build System [![Build Status](https://travis-ci.org/m-spilman/RollerSkate.svg?branch=master](https://travis-ci.org/m-spilman/RollerSkate)
