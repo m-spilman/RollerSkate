@@ -1,4 +1,4 @@
-
+/* eslint-disable */
 // sets the user status after a state change
 let userStatus = false
 auth.onAuthStateChanged(user => {

@@ -1,3 +1,4 @@
+/* eslint-disable */
 var songsArray = []
 document.addEventListener('DOMContentLoaded', function () {
   auth.onAuthStateChanged(function (user) {

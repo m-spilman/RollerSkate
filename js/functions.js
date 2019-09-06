@@ -1,4 +1,4 @@
-
+/* eslint-disable */
 
 // window.SHARAOKE = window.SHARAOKE || {}
 // window.SHARAOKE.musicArray = []
