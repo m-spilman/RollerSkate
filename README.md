@@ -1,6 +1,6 @@
 # Sharaoke [![Build Status](https://travis-ci.org/m-spilman/RollerSkate.svg?branch=master)](https://travis-ci.org/m-spilman/RollerSkate)
 
-**SHARAOKE** is an app that allows users to search for songs and share them with fellow users by saving them to a list. 
+**SHARAOKE** is an app that allows users to search for songs and saving them to a list for future sharing. 
 
 <img src="branding.png" width="600"> 
 <img src="logo.gif" width="600"> 
