@@ -13,8 +13,7 @@
    1. Search for songs using the Happi API
    1. Save songs to a shared playlist
 
-
-![](search.gif)
+<img src="search.gif" width="600"> 
 
 ### Known issues
 
