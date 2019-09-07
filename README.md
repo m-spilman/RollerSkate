@@ -75,11 +75,19 @@ some basic tools like, [StandardJS]
 
 ### Research
 
+<img src="damon.gif" width="600"> 
+
 ### Building
+
+<img src="fb.gif" width="600"> 
 
 ### Testing
 
+<img src="beautiful.gif" width="600"> 
+
 ### Deployment
+
+<img src="zack.gif" width="600"> 
 
 ## Team
 
