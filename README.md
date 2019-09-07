@@ -2,6 +2,7 @@
 
 **SHARAOKE** is an app that allows users to search for songs and share them with fellow users by saving them to a list. 
 
+![](branding.png)
 ![](logo.gif)
 
 ## Features
